@@ -294,7 +294,7 @@ extension Router : RouterMiddleware {
                 return
             }
 
-            let index = urlPath.index(urlPath.startIndex, offsetBy: mountpath.characters.count)
+            let index = urlPath.index(urlPath.startIndex, offsetBy: mountpath.count)
 
             #if swift(>=3.2)
                 request.parsedURLPath.path = String(urlPath[index...])

@@ -350,7 +350,7 @@ public class RouterResponse {
         }
         func validJsonpCallbackName(_ name: String?) -> String? {
             if let name = name {
-                if name.characters.count > 0 && name == sanitizeJSIdentifier(name) {
+                if name.count > 0 && name == sanitizeJSIdentifier(name) {
                     return name
                 }
             }
