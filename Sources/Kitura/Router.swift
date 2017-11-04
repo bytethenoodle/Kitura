@@ -295,7 +295,7 @@ extension Router : RouterMiddleware {
                 Log.error("Failed to find matches in url")
                 return
             }
-            let index = urlPath.index(urlPath.startIndex, offsetBy: mountpath.characters.count)
+            let index = urlPath.index(urlPath.startIndex, offsetBy: mountpath.count)
             request.parsedURLPath.path = String(urlPath[index...])
         }
 
